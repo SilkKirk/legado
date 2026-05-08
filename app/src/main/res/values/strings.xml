@@ -149,6 +149,11 @@
     <string name="audio_play_t">Playing</string>
     <string name="audio_play_s">Click to open the Playing</string>
     <string name="audio_pause">Pause</string>
+    <string name="video">Video</string>
+    <string name="video_play">Play</string>
+    <string name="video_play_t">Playing video</string>
+    <string name="video_play_s">Click to open video player</string>
+    <string name="video_pause">Video paused</string>
     <string name="text_return">Back</string>
     <string name="refresh">Refresh</string>
     <string name="start">Start</string>
@@ -1075,6 +1080,9 @@
     <string name="read_aloud_wake_lock_summary">The wake-up lock is enabled when reading aloud is enabled, and the wake-up lock on some mobile phones will be killed in the background.</string>
     <string name="audio_play_wake_lock">Audio service wake-up lock</string>
     <string name="audio_play_wake_lock_summary">The wake-up lock is enabled when playing audio, and some phones will be killed when the wake-up lock is turned on.</string>
+    <string name="video_play_wake_lock">Video service wake-up lock</string>
+    <string name="video_play_wake_lock_summary">The wake-up lock is enabled when playing video, and some phones will be killed when the wake-up lock is turned on.</string>
+    <string name="copy_url">Copy URL</string>
     <string name="change_search_scope">Toggle search scope</string>
     <string name="copy_rule">Copy Rule</string>
     <string name="paste_rule">Paste Rule</string>
