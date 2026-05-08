@@ -183,16 +183,23 @@ abstract class AppDatabase : RoomDatabase() {
                 """.trimIndent()
                 db.execSQL(insertBookGroupMusicSql)
                 @Language("sql")
+                val insertBookGroupVideoSql = """
+                    insert into book_groups(groupId, groupName, 'order', show) 
+                    select ${BookGroup.IdVideo}, '视频', -7, 1
+                    where not exists (select * from book_groups where groupId = ${BookGroup.IdVideo})
+                """.trimIndent()
+                db.execSQL(insertBookGroupVideoSql)
+                @Language("sql")
                 val insertBookGroupNetNoneGroupSql = """
                     insert into book_groups(groupId, groupName, 'order', show) 
-                    select ${BookGroup.IdNetNone}, '网络未分组', -7, 1
+                    select ${BookGroup.IdNetNone}, '网络未分组', -6, 1
                     where not exists (select * from book_groups where groupId = ${BookGroup.IdNetNone})
                 """.trimIndent()
                 db.execSQL(insertBookGroupNetNoneGroupSql)
                 @Language("sql")
                 val insertBookGroupLocalNoneGroupSql = """
                     insert into book_groups(groupId, groupName, 'order', show) 
-                    select ${BookGroup.IdLocalNone}, '本地未分组', -6, 0
+                    select ${BookGroup.IdLocalNone}, '本地未分组', -5, 0
                     where not exists (select * from book_groups where groupId = ${BookGroup.IdLocalNone})
                 """.trimIndent()
                 db.execSQL(insertBookGroupLocalNoneGroupSql)

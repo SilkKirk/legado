@@ -148,6 +148,11 @@
     <string name="audio_play_t">正在播放</string>
     <string name="audio_play_s">点击打开播放界面</string>
     <string name="audio_pause">播放暂停</string>
+    <string name="video">视频</string>
+    <string name="video_play">播放</string>
+    <string name="video_play_t">正在播放视频</string>
+    <string name="video_play_s">点击打开视频播放</string>
+    <string name="video_pause">视频暂停</string>
     <string name="text_return">返回</string>
     <string name="refresh">刷新</string>
     <string name="start">开始</string>
@@ -1072,6 +1077,9 @@
     <string name="read_aloud_wake_lock_summary">开启朗读的时候启用唤醒锁,有些手机开启唤醒锁会被杀后台</string>
     <string name="audio_play_wake_lock">音频服务唤醒锁</string>
     <string name="audio_play_wake_lock_summary">播放音频的时候启用唤醒锁,有些手机开启唤醒锁会被杀后台</string>
+    <string name="video_play_wake_lock">视频服务唤醒锁</string>
+    <string name="video_play_wake_lock_summary">播放视频的时候启用唤醒锁,有些手机开启唤醒锁会被杀后台</string>
+    <string name="copy_url">复制链接</string>
     <string name="change_search_scope">切换搜索范围</string>
     <string name="copy_rule">拷贝规则</string>
     <string name="paste_rule">粘贴规则</string>
