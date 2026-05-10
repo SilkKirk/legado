@@ -1082,7 +1082,6 @@
     <string name="audio_play_wake_lock_summary">The wake-up lock is enabled when playing audio, and some phones will be killed when the wake-up lock is turned on.</string>
     <string name="video_play_wake_lock">Video service wake-up lock</string>
     <string name="video_play_wake_lock_summary">The wake-up lock is enabled when playing video, and some phones will be killed when the wake-up lock is turned on.</string>
-    <string name="copy_url">Copy URL</string>
     <string name="change_search_scope">Toggle search scope</string>
     <string name="copy_rule">Copy Rule</string>
     <string name="paste_rule">Paste Rule</string>

@@ -1,18 +1,12 @@
 plugins {
-    //d 'com.android.library'
-    //id 'org.jetbrains.kotlin.android'
-    alias libs.plugins.android.library
-    alias libs.plugins.kotlin.android
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdk = compile_sdk_version
+    compileSdk = 34
     namespace = 'com.script'
-    kotlin {
-        jvmToolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
-        }
-    }
+
     defaultConfig {
         minSdk 21
         targetSdk 36
@@ -23,6 +17,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
     }
     lint {
         checkDependencies = true
@@ -35,13 +32,9 @@ android {
 }
 
 dependencies {
-//    api(fileTree(dir: 'lib', include: ['rhino-1.7.14.jar']))
     api libs.mozilla.rhino
 
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.okhttp)
     implementation(libs.androidx.collection)
-
-//    def coroutines_version = '1.7.3'
-//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
 }

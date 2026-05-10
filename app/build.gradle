@@ -1,17 +1,10 @@
 plugins {
-//    id "com.android.application"
-//    id 'org.jetbrains.kotlin.android'
-//    id 'kotlin-parcelize'
-//    //id 'kotlin-kapt'
-//    id 'com.google.devtools.ksp'
-//    id "com.google.gms.google-services"
-
-    alias libs.plugins.android.application
-    alias libs.plugins.kotlin.android
-    alias libs.plugins.kotlin.parcelize
-    alias libs.plugins.room
-    alias libs.plugins.ksp
-    alias libs.plugins.google.services
+    id "com.android.application"
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.devtools.ksp'
+    id "com.google.gms.google-services"
+    id 'androidx.room'
 }
 apply from: 'download.gradle'
 
@@ -24,13 +17,8 @@ def version = "3." + releaseTime()
 def gitCommits = Integer.parseInt('git rev-list HEAD --count'.execute().text.trim())
 
 android {
-    compileSdk = compile_sdk_version
+    compileSdk = 36
     namespace = 'io.legado.app'
-    kotlin {
-        jvmToolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
-        }
-    }
 
     signingConfigs {
         if (project.hasProperty("RELEASE_STORE_FILE")) {
@@ -116,16 +104,12 @@ android {
         }
     }
 
-
-    room {
-        schemaDirectory "$projectDir/schemas"
-    }
     // 设定Room的KSP参数
     ksp {
         arg("room.incremental", "true")
         arg("room.expandProjection", "true")
         arg("room.generateKotlin", "false")
-        //arg("room.schemaLocation", "$projectDir/schemas")
+        arg("room.schemaLocation", "$projectDir/schemas")
 
     }
 
@@ -136,6 +120,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    room {
+        schemaDirectory "$projectDir/schemas"
+    }
+
     packaging {
         resources.excludes.add('META-INF/*')
     }

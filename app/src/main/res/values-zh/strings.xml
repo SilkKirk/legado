@@ -1080,7 +1080,6 @@
     <string name="audio_play_wake_lock_summary">播放音频的时候启用唤醒锁,有些手机开启唤醒锁会被杀后台</string>
     <string name="video_play_wake_lock">视频服务唤醒锁</string>
     <string name="video_play_wake_lock_summary">播放视频的时候启用唤醒锁,有些手机开启唤醒锁会被杀后台</string>
-    <string name="copy_url">复制链接</string>
     <string name="change_search_scope">切换搜索范围</string>
     <string name="copy_rule">拷贝规则</string>
     <string name="paste_rule">粘贴规则</string>
