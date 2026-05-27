@@ -207,7 +207,9 @@ class CheckSourceService : BaseService() {
             if (book.tocUrl.isBlank()) {
                 WebBook.getBookInfoAwait(source, book)
             }
-            if (!CheckSource.checkCategory || source.bookSourceType == BookSourceType.file) {
+            if (!CheckSource.checkCategory || source.bookSourceType == BookSourceType.file
+            || source.bookSourceType == BookSourceType.video
+            || source.bookSourceType == BookSourceType.live) {
                 return
             }
             //校验目录

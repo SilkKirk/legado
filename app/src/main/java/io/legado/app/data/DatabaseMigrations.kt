@@ -355,6 +355,12 @@ object DatabaseMigrations {
             )
             db.execSQL(
                 """
+                update books set type = ${BookType.video}
+                where type = ${BookSourceType.video}
+            """.trimIndent()
+            )
+            db.execSQL(
+                """
                 update books set type = type | ${BookType.local}
                 where origin like '${BookType.localTag}%' or origin like '${BookType.webDavTag}%'
             """.trimIndent()

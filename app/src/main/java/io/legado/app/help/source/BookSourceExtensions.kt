@@ -117,6 +117,7 @@ fun BookSource.getBookType(): Int {
         BookSourceType.image -> BookType.image
         BookSourceType.audio -> BookType.audio
         BookSourceType.video -> BookType.video
+        BookSourceType.live -> BookType.live
         else -> BookType.text
     }
 }

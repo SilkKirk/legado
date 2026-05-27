@@ -53,9 +53,14 @@ object BookType {
      */
     const val video = 0b1_0000_0000_0000
 
+    /**
+     * 4096 直播
+     */
+    const val live = 0b10_0000_0000_0000
+
     @Target(AnnotationTarget.VALUE_PARAMETER)
     @Retention(AnnotationRetention.SOURCE)
-    @IntDef(text, updateError, audio, image, webFile, local, archive, notShelf, video)
+    @IntDef(text, updateError, audio, image, webFile, local, archive, notShelf, video, live)
     annotation class Type
 
     /**
