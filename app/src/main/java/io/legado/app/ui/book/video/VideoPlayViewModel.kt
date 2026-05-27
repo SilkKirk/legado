@@ -8,7 +8,9 @@ import io.legado.app.R
 import io.legado.app.data.appDb
 import io.legado.app.data.entities.Book
 import io.legado.app.data.entities.BookSource
+import io.legado.app.help.book.delete
 import io.legado.app.help.book.getBookSource
+import io.legado.app.help.book.removeType
 import io.legado.app.help.source.saveBookSource
 import io.legado.app.model.VideoPlay
 import io.legado.app.utils.getString

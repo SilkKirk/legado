@@ -35,6 +35,7 @@ import io.legado.app.help.exoplayer.ExoPlayerHelper
 import io.legado.app.help.glide.ImageLoader
 import io.legado.app.model.VideoPlay
 import io.legado.app.model.analyzeRule.AnalyzeUrl
+import io.legado.app.model.analyzeRule.AnalyzeUrl.Companion.getMediaItem
 import io.legado.app.receiver.MediaButtonReceiver
 import io.legado.app.ui.book.video.VideoPlayActivity
 import io.legado.app.utils.activityPendingIntent
@@ -550,7 +551,7 @@ class VideoPlayService : BaseService(),
     }
 
     private fun upVideoPlayNotification() {
-        upNotificationJob = execute {
+        upNotificationJob = lifecycleScope.launch {
             try {
                 val notification = createNotification()
                 notificationManager.notify(NotificationId.VideoPlayService, notification.build())

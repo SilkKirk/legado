@@ -262,6 +262,10 @@ fun Book.update() {
     appDb.bookDao.update(this)
 }
 
+suspend fun Book.delete() {
+    appDb.bookDao.delete(this)
+}
+
 fun Book.primaryStr(): String {
     return origin + bookUrl
 }

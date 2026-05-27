@@ -8,6 +8,8 @@ import android.widget.PopupWindow
 import android.widget.SeekBar
 import io.legado.app.R
 import io.legado.app.databinding.PopupSeekBarBinding
+import io.legado.app.model.VideoPlay
+import io.legado.app.service.VideoPlayService
 import io.legado.app.ui.widget.seekbar.SeekBarChangeListener
 
 class TimerSliderPopup(private val context: Context) :

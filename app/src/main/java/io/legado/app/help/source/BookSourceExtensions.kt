@@ -3,6 +3,7 @@ package io.legado.app.help.source
 import com.script.rhino.runScriptWithContext
 import io.legado.app.constant.BookSourceType
 import io.legado.app.constant.BookType
+import io.legado.app.data.appDb
 import io.legado.app.data.entities.BookSource
 import io.legado.app.data.entities.BookSourcePart
 import io.legado.app.data.entities.rule.ExploreKind
@@ -120,4 +121,8 @@ fun BookSource.getBookType(): Int {
         BookSourceType.live -> BookType.live
         else -> BookType.text
     }
+}
+
+suspend fun BookSource.saveBookSource() {
+    appDb.bookSourceDao.insert(this)
 }
